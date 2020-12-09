@@ -33,7 +33,9 @@ Route::middleware(['admin'])->group(function () {
 	Route::resource('admintareas', TareaController::class);
 });
 
-
+Route::get('hola/{id?}', function($id="ana"){
+	return "HOla como estas ".$id;
+});
 
 Auth::routes();
 
